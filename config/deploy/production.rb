@@ -59,3 +59,5 @@ server "51.91.101.129", user: "deploy", roles: %w{app db web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+set :default_env, { 'PASSENGER_INSTANCE_REGISTRY_DIR' => '/home/deploy/passenger_temp' }
