@@ -80,7 +80,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: slaextractor_production
-  username: slaextractor
-  password: <%= ENV["SLAEXTRACTOR_DATABASE_PASSWORD"] %>
+     url: <%= Rails.application.credentials.postgresql.production.database_url %>
